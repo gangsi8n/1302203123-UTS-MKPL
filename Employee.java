@@ -30,6 +30,10 @@ public class Employee {
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
+
+	private static final int G1 = 3000000;
+	private static final int G2 = 5000000;
+	private static final int G3 = 7000000;
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
 		this.employeeId = employeeId;
@@ -46,9 +50,7 @@ public class Employee {
 		childNames = new LinkedList<String>();
 		childIdNumbers = new LinkedList<String>();
 
-		private static final int G1 = 3000000;
-		private static final int G2 = 5000000;
-		private static final int G3 = 7000000;
+		
 	}
 	
 	/**
@@ -58,19 +60,19 @@ public class Employee {
 	
 	public void setMonthlySalary(int grade) {	
 		if (grade == 1) {
-			monthlySalary = 3000000;
+			monthlySalary = G1;
 			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
+				monthlySalary = (int) (G1 * 1.5);
 			}
 		}else if (grade == 2) {
-			monthlySalary = 5000000;
+			monthlySalary = G2;
 			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
+				monthlySalary = (int) (G2 * 1.5);
 			}
 		}else if (grade == 3) {
-			monthlySalary = 7000000;
+			monthlySalary = G3;
 			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
+				monthlySalary = (int) (G3 * 1.5);
 			}
 		}
 	}
